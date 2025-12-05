@@ -5,8 +5,15 @@ ini_set('display_errors', 1);
 
 require './FetchData.php';
 
+$curr_val = 50;
+
 foreach ($steps as $key => $val) {
-	echo "Value : ".$val.'</br>';
+	if (substr($val, 0, 1) === 'R') {  
+        
+    }
+    elseif (substr($val, 0, 1) === 'L') {  
+        
+    }
 }
 
 ?>
