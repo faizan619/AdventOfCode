@@ -18,17 +18,18 @@ foreach ($steps as $key => $val) {
     $num = substr($val,1);
 	if ($a === 'R') {  
         // echo "First : ".$num.'</br>';
-        echo "R - ". $curr_val + $num.'</br>';
-        // $curr_val = ($curr_val + $num) % 100;
+        // echo "R - ". $curr_val + $num.'</br>';
+        
+        $curr_val = ($curr_val + $num) % 100;
     }
     elseif ($a === 'L') {  
         // echo "Second : ".$num.'</br>';
         // echo "L - ".$curr_val - $num.'</br>';
 
-        // $curr_val = ($curr_val - $num) % 100;
-        // if ($curr_val < 0) {
-        //     $curr_val += 100;
-        // }
+        $curr_val = ($curr_val - $num) % 100;
+        if ($curr_val < 0) {
+            $curr_val += 100;
+        }
     }
     if ($curr_val === 0) {
         $zero_count++;
